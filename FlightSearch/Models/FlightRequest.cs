@@ -6,9 +6,9 @@
         public string From { get; set; } 
         public string To { get; set; }
         public DateTime Departure { get; set; }
-        public string Adults { get; set; }
-        public string Infant { get; set; }
-        public string Children { get; set; }
+        public int Adults { get; set; }
+        public int Infant { get; set; }
+        public int Children { get; set; }
         public string Days { get; set; }
         public string Cabin { get; set; }
         public string Preferred {  get; set; }
