@@ -42,7 +42,7 @@
                         <div class="">
                             <div class="">
                                 <div class="card-body">
-                                <form method="GET" id="flightForm" action="~/Flight/Search">
+                                <form method="GET" id="flightForm" action="~/Flight/FlightSearch">
                                     <ul class="nav mb-4" id="myTab">
                                         <li class="active pr-3">
                                             <a href="#oneway">
@@ -109,32 +109,32 @@
                                                         <div class="col-lg-3">
                                                             <select name="Adults" class="form-control form-control-sm" id="city">
                                                                 <option selected="">Adults</option>
-                                                                <option value="84">1</option>
-                                                                <option value="4">2</option>
-                                                                <option value="8">3</option>
-                                                                <option value="10">4</option>
-                                                                <option value="11">5</option>
-                                                                <option value="11">6</option>
-                                                                <option value="11">7</option>
-                                                                <option value="11">8</option>
-                                                                <option value="11">9</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-lg-3">
                                                             <select name="Infant" class="form-control form-control-sm" id="city">
                                                                 <option selected="">Infant</option>
-                                                                <option value="84">1</option>
+                                                                <option value="1">1</option>
                                                             </select>
                                                         </div>
                                                         <div class="col-lg-3">
                                                             <select name="Children" class="form-control form-control-sm" id="city">
                                                                 <option selected="">Children</option>
-                                                                <option value="84">1</option>
-                                                                <option value="4">2</option>
-                                                                <option value="8">3</option>
-                                                                <option value="10">4</option>
-                                                                <option value="11">5</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -158,12 +158,12 @@
                                                         <div class="col-lg-5">
                                                             <select name="Cabin" class="form-control form-control-sm" id="city">
                                                                 <option selected="">Cabin</option>
-                                                                <option value="84">Business</option>
+                                                                <option value="Business">Business</option>
                                                                 <option value="4">Economy</option>
-                                                                <option value="8">First</option>
-                                                                <option value="84">PremiumBusiness</option>
-                                                                <option value="4">PremiumEconomy</option>
-                                                                <option value="8">PremiumFirst</option>
+                                                                <option value="Economy">First</option>
+                                                                <option value="PremiumBusiness">PremiumBusiness</option>
+                                                                <option value="PremiumEconomy">PremiumEconomy</option>
+                                                                <option value="PremiumFirst">PremiumFirst</option>
                                                             </select>
                                                         </div>
                                                         <div class="col-lg-4">
@@ -177,7 +177,7 @@
                                                         <div class="col-lg-9">
                                                             <div class="form-check form-check-inline mt-1 form-control form-control-sm">
                                                                 <label class="form-check-label">
-                                                                    <input type="checkbox" class="form-check-input-styled" data-fouc="" name="Direct">
+                                                                    <input type="checkbox" class="form-check-input-styled" name="Direct">
                                                                     Direct
                                                                 </label>
                                                             </div>

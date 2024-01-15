@@ -17,43 +17,51 @@ namespace FlightSearch.Controllers
             return View();
         }
 
-        public IActionResult FlightSearch()
+        public async Task<IActionResult> FlightSearch(FlightRequest model)
         {
-            return View();
-        }
-
-        public async Task<IActionResult> Search(FlightRequest model)
-        {
-            try
+            if(model.To == null || model.From == null)
             {
-                using (var httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(30) })
+                return View();
+            }
+            else
+            {
+                try
                 {
-                    string url = $"http://124.29.220.210:4005/api/OneWayTrip?"+
-                                 $"Origin={model.From}"+
-                                 $"&Destination={model.To}"+
-                                 $"&Departure={model.Departure}"+
-                                 $"&Adults={model.Adults}"+
-                                 $"&Children={model.Children}"+
-                                 $"&Infant={model.Infant}&ReturnType=json&UserName=intelli&ApiPassword=786786&ClientID=1"+
-                                 $"&DirectOnly={model.Direct}&ShowAlternateGrid=False";
-
-                    using (var response = await httpClient.GetAsync(url))
+                    using (var httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(60) })
                     {
-                        if (response.IsSuccessStatusCode)
+                        var uriBuilder = new UriBuilder("http://124.29.220.210:4005/api/OneWayTrip")
                         {
-                            string apiResponse = await response.Content.ReadAsStringAsync();
+                            Query = $"Origin={model.From}&Destination={model.To}&Departure={model.Departure}" +
+                                    $"&Adults={model.Adults}&Children={model.Children}&Infant={model.Infant}" +
+                                    $"&ReturnType=json&UserName=intelli&ApiPassword=786786&ClientID=1" +
+                                    $"&DirectOnly={model.Direct}&ShowAlternateGrid=False"
+                        };
 
+                        using (var response = await httpClient.GetAsync(uriBuilder.Uri))
+                        {
+                            if (response.IsSuccessStatusCode)
+                            {
+                                string apiResponse = await response.Content.ReadAsStringAsync();
+                                // Process the API response as needed
+                            }
+                            else
+                            {
+                                // Handle the error response
+                                // For example, log the response status code and content
+                                string errorResponse = await response.Content.ReadAsStringAsync();
+                                Console.WriteLine($"Error: {response.StatusCode}, {errorResponse}");
+                            }
                         }
                     }
-
                 }
+                catch (Exception ex)
+                {
+                    // Handle exceptions
+                    Console.WriteLine($"An error occurred: {ex.Message}");
+                }
+                return View();
             }
-            catch(Exception ex)
-            {
-
-            }
-           
-            return View();
+            
         }
     }
 }
