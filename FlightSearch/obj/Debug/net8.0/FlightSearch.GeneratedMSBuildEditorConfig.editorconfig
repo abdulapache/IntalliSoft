@@ -9,55 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FlightSearch
 build_property.RootNamespace = FlightSearch
-build_property.ProjectDir = C:\Users\rahma\source\repos\FlightSearch\FlightSearch\
+build_property.ProjectDir = D:\IntalliSoft\FlightSearch\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rahma\source\repos\FlightSearch\FlightSearch
+build_property.MSBuildProjectDirectory = D:\IntalliSoft\FlightSearch
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Flight/FlightDetails.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Flight/FlightDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XEZsaWdodERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Flight/FlightSearch.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Flight/FlightSearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XEZsaWdodFNlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Flight/Index.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Flight/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Flight/_flightLayout.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Flight/_flightLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XF9mbGlnaHRMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Home/Index.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Home/Privacy.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Shared/Error.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/_ViewImports.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/_ViewStart.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rahma/source/repos/FlightSearch/FlightSearch/Views/Shared/_Layout.cshtml]
+[D:/IntalliSoft/FlightSearch/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-f8474s7il7

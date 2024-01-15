@@ -12,6 +12,6 @@
         public string Days { get; set; }
         public string Cabin { get; set; }
         public string Preferred {  get; set; }
-        public string Direct { get; set;}
+        public bool Direct { get; set;}
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rahma\\source\\repos\\FlightSearch\\FlightSearch\\FlightSearch.csproj",
+      "projectUniqueName": "D:\\IntalliSoft\\FlightSearch\\FlightSearch.csproj",
       "projectName": "FlightSearch",
-      "projectPath": "C:\\Users\\rahma\\source\\repos\\FlightSearch\\FlightSearch\\FlightSearch.csproj",
+      "projectPath": "D:\\IntalliSoft\\FlightSearch\\FlightSearch.csproj",
       "packagesPath": "C:\\Users\\rahma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rahma\\source\\repos\\FlightSearch\\FlightSearch\\obj\\",
+      "outputPath": "D:\\IntalliSoft\\FlightSearch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rahma\\AppData\\Roaming\\NuGet\\NuGet.Config",
