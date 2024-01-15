@@ -1,0 +1,1808 @@
+﻿@{
+    ViewData["Title"] = "Flight Details";
+    Layout = "~/Views/Flight/_flightLayout.cshtml";
+
+}
+
+
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content header-elements-md-inline">
+                <div class="page-title d-flex">
+                    <h4><span class="font-weight-semibold">Flight Details</span> </h4>
+                    <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+                </div>
+
+                <div class="header-elements d-none py-0 mb-3 mb-md-0">
+                    <div class="breadcrumb">
+                        <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Dashboard</a>
+                        <span class="breadcrumb-item">Flights</span>
+                        <a href="Search_flight.html" class="breadcrumb-item">Search Flight</a>
+                        <span class="breadcrumb-item active">Flight Details</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page header -->
+        <!-- Page content -->
+        <div class="page-content pt-0">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+                <!-- Content area -->
+                <div class="content">
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning text-white header-elements-inline">
+                            <h5 class="card-title">Flight Details</h5>
+                        </div>
+                        <div class="card-body over-flow-mob">
+                            <table class="table datatable-reorder">
+                                <thead>
+                                    <tr>
+                                        <th>Trip type</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Departing</th>
+                                        <th>AirLine</th>
+                                        <th>Class</th>
+                                        <th>Adult</th>
+                                        <th>Child</th>
+                                        <th>Infant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Trip 1</td>
+                                        <td>Islamabad (ISB)</td>
+                                        <td>Karachi (KHI)</td>
+                                        <td>09/26/2021</td>
+                                        <td>Any</td>
+                                        <td>Any</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3" style="padding-left: 0;">
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Change Search
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="collapse" id="collapseExample1">
+                            <div class="row">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <ul class="nav mb-4" id="myTab">
+                                            <li class="active pr-3">
+                                                <a href="#oneway">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="OneWay" checked />
+                                                            <div class="oneway-box">OneWay</div>
+                                                        </label>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="pr-3">
+                                                <a href="#round">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="Round" />
+                                                            <div class="oneway-box">Round</div>
+                                                        </label>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="pr-3">
+                                                <a href="#multi">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="Multi" />
+                                                            <div class="oneway-box">Multi</div>
+                                                        </label>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="oneway">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">From:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Going To:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Departure:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="date" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Adults</option>
+                                                                    <option value="84">1</option>
+                                                                    <option value="4">2</option>
+                                                                    <option value="8">3</option>
+                                                                    <option value="10">4</option>
+                                                                    <option value="11">5</option>
+                                                                    <option value="11">6</option>
+                                                                    <option value="11">7</option>
+                                                                    <option value="11">8</option>
+                                                                    <option value="11">9</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Infant</option>
+                                                                    <option value="84">1</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Children</option>
+                                                                    <option value="84">1</option>
+                                                                    <option value="4">2</option>
+                                                                    <option value="8">3</option>
+                                                                    <option value="10">4</option>
+                                                                    <option value="11">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-9">
+                                                                <div class="form-check form-check-inline mt-1 form-control form-control-sm">
+                                                                    <label class="form-check-label">
+                                                                        <div class="uniform-checker">
+                                                                            <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                                        </div>
+                                                                        +/- 3days
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-5">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Cabin</option>
+                                                                    <option value="84">Business</option>
+                                                                    <option value="4">Economy</option>
+                                                                    <option value="8">First</option>
+                                                                    <option value="84">PremiumBusiness</option>
+                                                                    <option value="4">PremiumEconomy</option>
+                                                                    <option value="8">PremiumFirst</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Preferred AirLine:">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-9">
+                                                                <div class="form-check form-check-inline mt-1 form-control form-control-sm">
+                                                                    <label class="form-check-label">
+                                                                        <div class="uniform-checker">
+                                                                            <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                                        </div>
+                                                                        Direct
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center mt-4">
+                                                        <button type="button" class="btn btn-primary">Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="round">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">From:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Going To:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Departure:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="date" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Arrival Date:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="date" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Adults</option>
+                                                                    <option value="84">1</option>
+                                                                    <option value="4">2</option>
+                                                                    <option value="8">3</option>
+                                                                    <option value="10">4</option>
+                                                                    <option value="11">5</option>
+                                                                    <option value="11">6</option>
+                                                                    <option value="11">7</option>
+                                                                    <option value="11">8</option>
+                                                                    <option value="11">9</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Infant</option>
+                                                                    <option value="84">1</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Children</option>
+                                                                    <option value="84">1</option>
+                                                                    <option value="4">2</option>
+                                                                    <option value="8">3</option>
+                                                                    <option value="10">4</option>
+                                                                    <option value="11">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-9">
+                                                                <div class="form-check form-check-inline mt-1 form-control form-control-sm">
+                                                                    <label class="form-check-label">
+                                                                        <div class="uniform-checker">
+                                                                            <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                                        </div>
+                                                                        +/- 3days
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-5">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Cabin</option>
+                                                                    <option value="84">Business</option>
+                                                                    <option value="4">Economy</option>
+                                                                    <option value="8">First</option>
+                                                                    <option value="84">PremiumBusiness</option>
+                                                                    <option value="4">PremiumEconomy</option>
+                                                                    <option value="8">PremiumFirst</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Preferred AirLine:">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-9">
+                                                                <div class="form-check form-check-inline mt-1 form-control form-control-sm">
+                                                                    <label class="form-check-label">
+                                                                        <div class="uniform-checker">
+                                                                            <input type="checkbox" class="" data-fouc="">
+                                                                        </div>
+                                                                        Direct
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center mt-4">
+                                                        <button type="button" class="btn btn-primary">Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="multi">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">From:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Going To:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Departure:</label>
+                                                            <div class="col-lg-9">
+                                                                <input type="date" class="form-control form-control-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group" id="dynamic_form">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">From:</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="text" class="form-control form-control-sm" id="from">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Going To:</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="text" class="form-control form-control-sm" id="to">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Departure:</label>
+                                                                        <div class="col-lg-9 col-md-11">
+                                                                            <input type="date" class="form-control form-control-sm" id="Degree" style="padding-right: 65px;">
+                                                                        </div>
+                                                                        <div class="">
+                                                                            <div class="button-group btn-plus">
+                                                                                <a href="javascript:void(0)" class="btn btn-primary position_abs" id="plus5">+</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="btn-plus">
+                                                                            <a href="javascript:void(0)" class="btn btn-danger position_abs_dan" id="minus5">-</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Adults</option>
+                                                                    <option value="84">1</option>
+                                                                    <option value="4">2</option>
+                                                                    <option value="8">3</option>
+                                                                    <option value="10">4</option>
+                                                                    <option value="11">5</option>
+                                                                    <option value="12">6</option>
+                                                                    <option value="13">7</option>
+                                                                    <option value="14">8</option>
+                                                                    <option value="15">9</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Infant</option>
+                                                                    <option value="84">1</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Children</option>
+                                                                    <option value="84">1</option>
+                                                                    <option value="4">2</option>
+                                                                    <option value="8">3</option>
+                                                                    <option value="10">4</option>
+                                                                    <option value="11">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-5">
+                                                                <select name="City" class="form-control form-control-sm" id="city">
+                                                                    <option selected="">Cabin</option>
+                                                                    <option value="84">Business</option>
+                                                                    <option value="4">Economy</option>
+                                                                    <option value="8">First</option>
+                                                                    <option value="84">PremiumBusiness</option>
+                                                                    <option value="4">PremiumEconomy</option>
+                                                                    <option value="8">PremiumFirst</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Preferred AirLine:">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                            <div class="col-lg-9">
+                                                                <div class="form-check form-check-inline mt-1 form-control form-control-sm">
+                                                                    <label class="form-check-label">
+                                                                        <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                                        Direct
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center mt-4">
+                                                        <button type="button" class="btn btn-primary">Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning text-white header-elements-inline">
+                            <h5 class="card-title">Filters</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-img">
+                                        <img src="~/assets/images/plain-text.png" />
+                                        <h4 style="display: inline-block;"> Airline</h4>
+                                    </div>
+                                    <div class="airlne-list pb-3 mb-3">
+                                        <div class="">
+                                            <div class="form-check form-check-inline mt-1 ml-3">
+                                                <label class="form-check-label form-check-bx">
+                                                    <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                    <img src="~/assets/images/pk.png" width="50%" />
+                                                    
+                                                    </labesl>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="form-check form-check-inline mt-1 ml-3">
+                                                <label class="form-check-label form-check-bx">
+                                                    <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                    <img src="~/assets/images/pk.png" width="50%" />
+                                                    </labesl>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="form-check form-check-inline mt-1 ml-3">
+                                                <label class="form-check-label form-check-bx">
+                                                    <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                    <img src="~/assets/images/pk.png" width="50%" />
+                                                    </labesl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 direct-price-colm">
+                                    <div class="text-img">
+                                        <img src="~/assets/images/plain-text.png" />
+                                        <h4 style="display: inline-block;"> Connection</h4>
+                                    </div>
+                                    <div class="direct-price pr-3">
+                                        <div class="form-check form-check-inline mt-1 ml-3">
+                                            <label class="form-check-label form-check-bx">
+                                                <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                Direct
+                                            </label>
+                                        </div>
+                                        <div class="direct-price-sub ml-auto">
+                                            <a href="#">23,240 PKR</a>
+                                        </div>
+                                    </div>
+                                    <div class="direct-price pr-3 mt-1">
+                                        <div class="form-check form-check-inline mt-1 ml-3">
+                                            <label class="form-check-label form-check-bx">
+                                                <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                1 Stop
+                                            </label>
+                                        </div>
+                                        <div class="direct-price-sub ml-auto">
+                                            <a href="#">23,240 PKR</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 direct-price-colm">
+                                    <div class="text-img">
+                                        <img src="~/assets/images/plain-text.png" />
+                                        <h4 style="display: inline-block;"> Price range</h4>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-10 offset-lg-1">
+                                            <div class="row slider-labels">
+                                                <div class="col-md-6 caption pos-abs">
+                                                    <div class="range-slider">
+                                                        <div class="price-input">
+                                                            <strong>Min:</strong>
+                                                            <span>
+                                                                <input type="text" id="minamount">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 text-right caption">
+                                                    <div class="range-slider">
+                                                        <div class="price-input">
+                                                            <strong>Max:</strong>
+                                                            <span>
+                                                                <input type="text" id="maxamount">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="500" data-max="1000">
+                                                        <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+                                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+                                                        <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-img">
+                                        <img src="~/assets/images/plain-text.png" />
+                                        <h4 style="display: inline-block;"> Price or Time</h4>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-check form-check-inline mt-1 ml-3">
+                                            <label class="form-check-label form-check-bx">
+                                                <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                Lowest Fare
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-check form-check-inline mt-1 ml-3">
+                                            <label class="form-check-label form-check-bx">
+                                                <input type="checkbox" class="form-check-input-styled" data-fouc="">
+                                                Shortest Travel Time
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning text-white header-elements-inline">
+                            <h5 class="card-title">Flights For Nearby Dates</h5>
+                        </div>
+                        <div class="card-body over-flow-mob">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="row mb-2 week-earlier-icn">
+                                        <div class="col-md-6 week-early">
+                                            <a href="#">
+                                                <strong><span>&#60;</span></strong>
+                                                <span>Week earlier</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <a href="#">
+                                                <span>Week Later</span>
+                                                <strong><span>&#62;</span></strong>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <table class="dep-ret-dates">
+                                        <thead>
+                                            <tr>
+                                                <th>Departure<br><span>11 Oct (Mon)</span></th>
+                                                <th>Departure<br><span>12 Oct (Tue)</span></th>
+                                                <th>Departure<br><span>13 Oct (Wed)</span></th>
+                                                <th>Departure<br><span>14 Oct (Thu)</span></th>
+                                                <th>Departure<br><span>15 Oct (Fri)</span></th>
+                                                <th>Departure<br><span>16 Oct (Sat)</span></th>
+                                                <th>Departure<br><span>17 Oct (Sun)</span></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="box-1">
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td class="box-2 box-4">
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td class="box-img box-2">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img box-2">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img box-2">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img box-2">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img box-2">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <th>Return<br><span>Oct (Tue)</span></th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <th>Return<br><span>13 Oct (Wed)</span></th>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td class="box-img">
+                                                    
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <th>Return<br><span>14 Oct (Thu)</span></th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <th>Return<br><span>15 Oct (Fri)</span></th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td class="box-img">
+                                                    <span><img src="~/assets/images/no-flights.png" width="45" /></span>
+                                                </td>
+                                                <th>Return<br><span>16 Oct (Sat)</span></th>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <th>Return<br><span>17 Oct (Sun)</span></th>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <td>
+                                                    <strong>23,240 PKR</strong><br>
+                                                    <a class="" href="#" data-toggle="modal" data-target="#detail">View Details</a>
+                                                </td>
+                                                <th>Return<br><span>18 Oct (Mon)</span></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="option-section card">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-9 col-sm-12 mt-2" style="padding: 0;">
+                                    <div class="row row pl-3 pr-3 pt-3">
+                                        <div class="col-md-12">
+                                            <div class="row mb-3">
+                                                <div class="col-md-2">
+                                                    <div class="pia-img">
+                                                       
+                                                        <img src="~/assets/images/pk.png" width="100%" />
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-6 airport-wrapper-sec">
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            KHI
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="interchange">
+                                                        <div class="interchange-inner">
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            LHE
+                                                        </div>
+                                                    </div>
+                                                    <div class="pl-2" style="font-size: 13px; margin-top: 5px;">
+                                                        <span>12 Oct (Tue)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-md-right pr-3">
+                                                    <div class="">
+                                                        <span class="top-sec">Direct</span><br>
+                                                        <span>Class:</span><span> Economy</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-md-4 offset-md-2">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="OneWay" checked>
+                                                            <div class="top-sec">
+                                                                <span class="time-pair">
+                                                                    <span class="depart-time base-time">08:00 </span>
+                                                                    <span class="time-meridiem meridiem">am</span>
+                                                                </span>
+                                                                <span class="sep">–</span>
+                                                                <span class="time-pair">
+                                                                    <span class="arrival-time base-time">09:45 </span>
+                                                                    <span class="time-meridiem meridiem">pm</span>
+                                                                </span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="display: flex;">
+                                                    <div class="clock-img mr-2">
+                                                        <img src="assets/images/clock-time.png" width="20" alt="">
+                                                    </div>
+                                                    <div class="">
+                                                        <span>1h 45m</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pr-3">
+                                                            <img src="assets/images/briefcase.png" width="20" alt="">
+                                                            <a class="vert-detail" href="#" data-toggle="modal" data-target="#detail">Details</a>
+                                                        </div>
+                                                        <div id="detail" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+                                                            <div class="modal-dialog modal-sm">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-success-400 pt-2 pb-2">
+                                                                        <h4 style="margin-bottom: 0;">Flight Detail</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                                                    </div>
+                                                                    <div class="modal-body body-pd">
+                                                                        <section class="segment-pd">
+                                                                            <div class="container">
+                                                                                <div class="row depart-head">
+                                                                                    <div class="col-md-7 airport-wrapper-main" style="display: flex;">
+                                                                                        <div class="airport-wrapper">
+                                                                                            <div class="direction-code">
+                                                                                                KHI
+                                                                                            </div>
+                                                                                            <div class="time">
+                                                                                                <span class="hour ng-star-inserted">08:00</span><!---->
+                                                                                                <span class="day">29 Nov (Mon)</span>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div class="interchange">
+                                                                                            <div class="interchange-inner">
+                                                                                                <!---->
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div class="airport-wrapper">
+                                                                                            <div class="direction-code">
+                                                                                                LHE
+                                                                                            </div>
+                                                                                            <div class="time">
+                                                                                                <span class="hour ng-star-inserted">09:45</span><!---->
+                                                                                                <span class="day">29 Nov (Mon)</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-3 text-left airport-wrapper-main">
+                                                                                        <div class="trip-time connection-attributes-section">
+                                                                                            <div class="trip-time-header connection-attributes-header">
+                                                                                                Total trip duration:
+                                                                                            </div>
+                                                                                            <div class="total-time connection-attributes-value">
+                                                                                                <span class="hour ng-star-inserted">1h 45min</span><!---->
+                                                                                                <span class="stops">
+                                                                                                    <ins class="sep ng-star-inserted">|</ins><!---->
+                                                                                                    <span class="stops-count">Direct</span>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-2">
+                                                                                        <div class="connection-attributes-section">
+                                                                                            <div class="connection-attributes-header">
+                                                                                                class:
+                                                                                            </div>
+                                                                                            <div class="connection-attributes-value">
+                                                                                                Economy
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="first last ng-star-inserted">
+                                                                            <div class="container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="segment">
+                                                                                            <div class="segment-connection">
+                                                                                                <p class="airport text-left">
+                                                                                                    <span class="airport-name">
+                                                                                                        <span class="airport-title">Jinnah (KHI)</span>
+                                                                                                        <ins class="sep">, </ins>
+                                                                                                        <span class="city-name">Karachi</span>
+                                                                                                        <ins class="sep">, </ins>
+                                                                                                        <span class="country-name">Pakistan</span>
+                                                                                                    </span>
+                                                                                                    <span class="time">
+                                                                                                        <span class="segment-direction">departure:</span>
+                                                                                                        <span class="hour ng-star-inserted">08:00</span><!---->
+                                                                                                        <ins class="sep ng-star-inserted">, </ins><!---->
+                                                                                                        <span class="day">
+                                                                                                            29 Nov (Mon)
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <!---->
+                                                                                                </p>
+                                                                                                <div class="segment-info-wrapper">
+                                                                                                    <div class="segment-info collapsed clickable">
+                                                                                                        <div class="info-header">
+                                                                                                            <span class="row-img">
+                                                                                                                <div class="airline-logo">
+                                                                                                                    <img src="assets/images/PK (2).png" width="30" height="30" alt="">
+                                                                                                                </div>
+                                                                                                                <span class="airline-info">
+                                                                                                                    <span class="airline-name">Pakistan Airlines</span>
+                                                                                                                    <span class="qa-segment-airline-name-operated-by ng-star-inserted">operated by Pakistan Airlines</span><!---->
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                            <span class="row-img right">
+                                                                                                                <!---->
+                                                                                                                <span class="aircraft jet ng-star-inserted">
+                                                                                                                    <img src="assets/images/aircraft.png" alt="">
+                                                                                                                    <span class="name">AirbusA320 (Jet)</span>
+                                                                                                                </span><!---->
+                                                                                                                <span class="time-duration ng-star-inserted">
+                                                                                                                    <img src="assets/images/clock-time.png" alt="">
+                                                                                                                    <span class="time">1h 45min</span>
+                                                                                                                </span><!---->
+                                                                                                            </span>
+                                                                                                        </div>
+
+                                                                                                        <div class="facilities-wrapper">
+                                                                                                            <div class="ng-star-inserted">
+                                                                                                                <div class="facilities-list">
+                                                                                                                    <div class="facility ng-star-inserted">
+                                                                                                                        <img src="assets/images/briefcase.png" class="icon" alt="">
+                                                                                                                        <span>
+                                                                                                                            Checked baggage
+                                                                                                                            <!---->
+                                                                                                                            <span class="ng-star-inserted"> included!</span><!---->
+                                                                                                                            <!---->
+                                                                                                                        </span>
+                                                                                                                    </div>
+                                                                                                                    <div class="facility on-demand ng-star-inserted">
+                                                                                                                        <img src="assets/images/boxes.png" class="icon" alt="">
+                                                                                                                        <span>
+                                                                                                                            Seat configuration
+                                                                                                                            <!---->
+                                                                                                                            <!---->
+                                                                                                                            <span class="ng-star-inserted">: 3-3</span><!---->
+                                                                                                                        </span>
+                                                                                                                    </div><!---->
+                                                                                                                </div>
+                                                                                                            </div><!---->
+                                                                                                            <div class="flight-info">
+                                                                                                                <span class="number">Flight number: <strong class="flight-number">302</strong></span>
+                                                                                                                <span>Class: <strong class="service-class"> Economy</strong></span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <!---->
+                                                                                            </div>
+                                                                                            <p class="airport text-left">
+                                                                                                <span class="airport-name">
+                                                                                                    <span class="airport-title">Allama Iqbal (LHE)</span><ins class="sep">, </ins> <span class="city-name">Lahore</span><ins class="sep">, </ins>
+                                                                                                    <span class="country-name">Pakistan</span>
+                                                                                                </span>
+                                                                                                <span class="time">
+                                                                                                    <span class="segment-direction">arrival:</span>
+                                                                                                    <span class="hour ng-star-inserted">09:45</span><!----><ins class="sep ng-star-inserted">, </ins><!---->
+                                                                                                    <span class="day">
+                                                                                                        29 Nov (Mon)
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                                <!---->
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="modal-footer mt-3">
+                                                                        <button type="button" class="btn btn-dark" data-dismiss="modal" style="padding: 5px 22px;">Close</button>
+                                                                        <a href="flight_booking.html" class="btn btn-primary" style="padding: 5px 22px;">Book Now</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row p-3 mb-2">
+                                        <div class="col-md-12">
+                                            <div class="row mb-3">
+                                                <div class="col-md-2">
+                                                    <div class="pia-img">
+                                                        <img src="~/assets/images/pk.png" width="100%" />
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-6 airport-wrapper-sec">
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            KHI
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="interchange">
+                                                        <div class="interchange-inner">
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            LHE
+                                                        </div>
+                                                    </div>
+                                                    <div class="pl-2" style="font-size: 13px; margin-top: 5px;">
+                                                        <span>12 Oct (Tue)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-md-right pr-3">
+                                                    <div class="">
+                                                        <span class="top-sec">Direct</span><br>
+                                                        <span>Class:</span><span> Economy</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-md-4 offset-md-2">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="OneWay" checked>
+                                                            <div class="top-sec">
+                                                                <span class="time-pair">
+                                                                    <span class="depart-time base-time">08:00 </span>
+                                                                    <span class="time-meridiem meridiem">am</span>
+                                                                </span>
+                                                                <span class="sep">–</span>
+                                                                <span class="time-pair">
+                                                                    <span class="arrival-time base-time">09:45 </span>
+                                                                    <span class="time-meridiem meridiem">pm</span>
+                                                                </span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="display: flex;">
+                                                    <div class="clock-img mr-2">
+                                                        <img src="assets/images/clock-time.png" width="20" alt="">
+                                                    </div>
+                                                    <div class="">
+                                                        <span>1h 45m</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pr-3">
+                                                            <img src="assets/images/briefcase.png" width="20" alt="">
+                                                            <a class="vert-detail" href="#" data-toggle="modal" data-target="#detail">Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 offset-md-2">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="OneWay">
+                                                            <div class="top-sec">
+                                                                <span class="time-pair">
+                                                                    <span class="depart-time base-time">11:00 </span>
+                                                                    <span class="time-meridiem meridiem">am</span>
+                                                                </span>
+                                                                <span class="sep">–</span>
+                                                                <span class="time-pair">
+                                                                    <span class="arrival-time base-time">12:45 </span>
+                                                                    <span class="time-meridiem meridiem">pm</span>
+                                                                </span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="display: flex;">
+                                                    <div class="mr-2">
+                                                        <img src="assets/images/clock-time.png" width="20" alt="">
+                                                    </div>
+                                                    <div class="">
+                                                        <span>1h 45m</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pr-3">
+                                                            <img src="assets/images/briefcase.png" width="20" alt="">
+                                                            <a class="vert-detail" href="#" data-toggle="modal" data-target="#detail">Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-12 detail-btn-sec">
+                                    <div class="row mb-1">
+                                        <div class="col-md-12">
+                                            <div class="top-sec">
+                                                <span>23,240</span>
+                                                PKR
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a href="flight_booking.html" class="btn btn-primary" style="padding: 6px 26px;">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="fare-bag-sec">
+                                  <div class="fare-bag-icon dropdown show">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: transparent !important;">
+                                      <img src="assets/images/bag-img-1.png" width="100%"  alt="">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                      <table class="table  numeric-align">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3" class="text-center">
+                                                    <strong>Fair Break Up</strong>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Base Fare
+                                                </td>
+                                                <td>
+
+                                                </td>
+
+                                                <td>
+                                                    PKR 2,120
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Tax
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+                                                    PKR 2,120
+                                                </td>
+                                            </tr>
+                                            <tr class="grand-total">
+                                                <td>
+                                                    Total Fair
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    PKR 11,620
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div class="quantity-bag">
+                                    <span>1</span>
+                                  </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </section>
+                    <section class="option-section card">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-9 col-sm-12 mt-2" style="padding: 0;">
+                                    <div class="row row pl-3 pr-3 pt-3">
+                                        <div class="col-md-12">
+                                            <div class="row mb-3">
+                                                <div class="col-md-2">
+                                                    <div class="pia-img">
+                                                        <img src="~/assets/images/pk.png" width="100%" />
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-6 airport-wrapper-sec">
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            LHE
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="interchange">
+                                                        <div class="interchange-inner">
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            KHI
+                                                        </div>
+                                                    </div>
+                                                    <div class="pl-2" style="font-size: 13px; margin-top: 5px;">
+                                                        <span>12 Oct (Tue)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-right pr-3">
+                                                    <div class="">
+                                                        <span class="top-sec">Direct</span><br>
+                                                        <span>Class:</span><span> Economy</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-md-4 offset-md-2">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="OneWay" checked>
+                                                            <div class="top-sec">
+                                                                <span class="time-pair">
+                                                                    <span class="depart-time base-time">08:00 </span>
+                                                                    <span class="time-meridiem meridiem">am</span>
+                                                                </span>
+                                                                <span class="sep">–</span>
+                                                                <span class="time-pair">
+                                                                    <span class="arrival-time base-time">09:45 </span>
+                                                                    <span class="time-meridiem meridiem">pm</span>
+                                                                </span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="display: flex;">
+                                                    <div class="clock-img mr-2">
+                                                        <img src="assets/images/clock-time.png" width="20" alt="">
+                                                    </div>
+                                                    <div class="">
+                                                        <span>1h 45m</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pr-3">
+                                                            <img src="assets/images/briefcase.png" width="20" alt="">
+                                                            <a class="vert-detail" href="#" data-toggle="modal" data-target="#detail">Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row p-3 mb-2">
+                                        <div class="col-md-12">
+                                            <div class="row mb-3">
+                                                <div class="col-md-2">
+                                                    <div class="pia-img">
+                                                        <img src="~/assets/images/pk.png" width="100%" />
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-6 airport-wrapper-sec">
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            KHI
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="interchange">
+                                                        <div class="interchange-inner hide-medium">
+                                                            <div class="code ng-star-inserted">
+                                                                <!---->
+                                                                <span>RYK</span><!---->
+                                                                <!---->
+                                                            </div><!---->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="airport-wrapper">
+                                                        <div class="direction-code">
+                                                            LHE
+                                                        </div>
+                                                    </div>
+                                                    <div class="pl-2" style="font-size: 13px; margin-top: 5px;">
+                                                        <span>12 Oct (Tue)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-md-right pr-3">
+                                                    <div class="">
+                                                        <span class="top-sec">Direct</span><br>
+                                                        <span>Class:</span><span> Economy</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-md-4 offset-md-2">
+                                                    <div class="checkbox oneway-checked">
+                                                        <label class="oneway-label">
+                                                            <input class="oneway-box-check" type="radio" id="product" value="OneWay" checked>
+                                                            <div class="top-sec">
+                                                                <span class="time-pair">
+                                                                    <span class="depart-time base-time">08:00 </span>
+                                                                    <span class="time-meridiem meridiem">am</span>
+                                                                </span>
+                                                                <span class="sep">–</span>
+                                                                <span class="time-pair">
+                                                                    <span class="arrival-time base-time">09:45 </span>
+                                                                    <span class="time-meridiem meridiem">pm</span>
+                                                                </span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="display: flex;">
+                                                    <div class="clock-img mr-2">
+                                                        <img src="assets/images/clock-time.png" width="20" alt="">
+                                                    </div>
+                                                    <div class="">
+                                                        <span>1h 45m</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pr-3">
+                                                            <img src="assets/images/briefcase.png" width="20" alt="">
+                                                            <a class="vert-detail" href="#" data-toggle="modal" data-target="#stop_one">Details</a>
+                                                        </div>
+                                                        <div id="stop_one" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+                                                            <div class="modal-dialog modal-sm">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-success-400 pt-2 pb-2">
+                                                                        <h4 style="margin-bottom: 0;">FLight Details</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                                                    </div>
+                                                                    <div class="modal-body body-pd">
+                                                                        <section class="segment-pd">
+                                                                            <div class="container">
+                                                                                <div class="row depart-head">
+                                                                                    <div class="col-md-7" style="display: flex;">
+                                                                                        <div class="airport-wrapper">
+                                                                                            <div class="direction-code">
+                                                                                                KHI
+                                                                                            </div>
+                                                                                            <div class="time">
+                                                                                                <span class="hour ng-star-inserted">08:00</span><!---->
+                                                                                                <span class="day">29 Nov (Mon)</span>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div class="interchange">
+                                                                                            <div class="interchange-inner hide-medium">
+                                                                                                <div class="code ng-star-inserted">
+                                                                                                    <!---->
+                                                                                                    <span>RYK</span><!---->
+                                                                                                    <!---->
+                                                                                                </div><!---->
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div class="airport-wrapper">
+                                                                                            <div class="direction-code">
+                                                                                                LHE
+                                                                                            </div>
+                                                                                            <div class="time">
+                                                                                                <span class="hour ng-star-inserted">09:45</span><!---->
+                                                                                                <span class="day">29 Nov (Mon)</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-3 text-left">
+                                                                                        <div class="trip-time connection-attributes-section">
+                                                                                            <div class="trip-time-header connection-attributes-header">
+                                                                                                Total trip duration:
+                                                                                            </div>
+                                                                                            <div class="total-time connection-attributes-value">
+                                                                                                <span class="hour ng-star-inserted">1h 45min</span><!---->
+                                                                                                <span class="stops">
+                                                                                                    <ins class="sep ng-star-inserted">|</ins><!---->
+                                                                                                    <span class="stops-count">Direct</span>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-2">
+                                                                                        <div class="connection-attributes-section">
+                                                                                            <div class="connection-attributes-header">
+                                                                                                class:
+                                                                                            </div>
+                                                                                            <div class="connection-attributes-value">
+                                                                                                Economy
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="first last ng-star-inserted">
+                                                                            <div class="container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="segment">
+                                                                                            <div class="segment-connection">
+                                                                                                <p class="airport text-left">
+                                                                                                    <span class="airport-name">
+                                                                                                        <span class="airport-title">Jinnah (KHI)</span>
+                                                                                                        <ins class="sep">, </ins>
+                                                                                                        <span class="city-name">Karachi</span>
+                                                                                                        <ins class="sep">, </ins>
+                                                                                                        <span class="country-name">Pakistan</span>
+                                                                                                    </span>
+                                                                                                    <span class="time">
+                                                                                                        <span class="segment-direction">departure:</span>
+                                                                                                        <span class="hour ng-star-inserted">08:00</span><!---->
+                                                                                                        <ins class="sep ng-star-inserted">, </ins><!---->
+                                                                                                        <span class="day">
+                                                                                                            29 Nov (Mon)
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <!---->
+                                                                                                </p>
+                                                                                                <div class="segment-info-wrapper">
+                                                                                                    <div class="segment-info collapsed clickable">
+                                                                                                        <div class="info-header">
+                                                                                                            <span class="row-img">
+                                                                                                                <div class="airline-logo">
+                                                                                                                    <img src="assets/images/PK (2).png" width="30" height="30" alt="">
+                                                                                                                </div>
+                                                                                                                <span class="airline-info">
+                                                                                                                    <span class="airline-name">Pakistan Airlines</span>
+                                                                                                                    <span class="qa-segment-airline-name-operated-by ng-star-inserted">operated by Pakistan Airlines</span><!---->
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                            <span class="row-img right">
+                                                                                                                <!---->
+                                                                                                                <span class="aircraft jet ng-star-inserted">
+                                                                                                                    <img src="assets/images/aircraft.png" alt="">
+                                                                                                                    <span class="name">AirbusA320 (Jet)</span>
+                                                                                                                </span><!---->
+                                                                                                                <span class="time-duration ng-star-inserted">
+                                                                                                                    <img src="assets/images/clock-time.png" alt="">
+                                                                                                                    <span class="time">1h 45min</span>
+                                                                                                                </span><!---->
+                                                                                                            </span>
+                                                                                                        </div>
+
+                                                                                                        <div class="facilities-wrapper">
+                                                                                                            <div class="ng-star-inserted">
+                                                                                                                <div class="facilities-list">
+                                                                                                                    <div class="facility ng-star-inserted">
+                                                                                                                        <img src="assets/images/briefcase.png" class="icon" alt="">
+                                                                                                                        <span>
+                                                                                                                            Checked baggage
+                                                                                                                            <!---->
+                                                                                                                            <span class="ng-star-inserted"> included!</span><!---->
+                                                                                                                            <!---->
+                                                                                                                        </span>
+                                                                                                                    </div>
+                                                                                                                    <div class="facility on-demand ng-star-inserted">
+                                                                                                                        <img src="assets/images/boxes.png" class="icon" alt="">
+                                                                                                                        <span>
+                                                                                                                            Seat configuration
+                                                                                                                            <!---->
+                                                                                                                            <!---->
+                                                                                                                            <span class="ng-star-inserted">: 3-3</span><!---->
+                                                                                                                        </span>
+                                                                                                                    </div><!---->
+                                                                                                                </div>
+                                                                                                            </div><!---->
+                                                                                                            <div class="flight-info">
+                                                                                                                <span class="number">Flight number: <strong class="flight-number">302</strong></span>
+                                                                                                                <span>Class: <strong class="service-class"> Economy</strong></span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <!---->
+                                                                                            </div>
+                                                                                            <p class="airport text-left">
+                                                                                                <span class="airport-name">
+                                                                                                    <span class="airport-title">Rahim Yar Khan Airport (RYK)</span><ins class="sep">, </ins> <span class="city-name">Rahim Yar Khan</span><ins class="sep">, </ins>
+                                                                                                    <span class="country-name">Pakistan</span>
+                                                                                                </span>
+                                                                                                <span class="time">
+                                                                                                    <span class="segment-direction">arrival:</span>
+                                                                                                    <span class="hour ng-star-inserted">09:45</span><!----><ins class="sep ng-star-inserted">, </ins><!---->
+                                                                                                    <span class="day">
+                                                                                                        29 Nov (Mon)
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                                <!---->
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="segment-change ng-star-inserted">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <img src="assets/images/i-icon.png" alt="">
+                                                                                    <div class="change-wrapper">
+                                                                                        <!---->
+                                                                                        <!---->
+                                                                                        <span class="change-header ng-star-inserted">Change</span><!---->
+                                                                                        <span class="time ng-star-inserted">
+                                                                                            <span>Transfer Time: </span><strong class="qa-segment-change-time">4h 45min</strong>
+                                                                                        </span><!---->
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="first last ng-star-inserted">
+                                                                            <div class="container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="segment">
+                                                                                            <div class="segment-connection">
+                                                                                                <p class="airport text-left">
+                                                                                                    <span class="airport-name">
+                                                                                                        <span class="airport-title">Rahim Yar Khan Airport (RYK)</span>
+                                                                                                        <ins class="sep">, </ins>
+                                                                                                        <span class="city-name">Rahim Yar Khan</span>
+                                                                                                        <ins class="sep">, </ins>
+                                                                                                        <span class="country-name">Pakistan</span>
+                                                                                                    </span>
+                                                                                                    <span class="time">
+                                                                                                        <span class="segment-direction">departure:</span>
+                                                                                                        <span class="hour ng-star-inserted">08:00</span><!---->
+                                                                                                        <ins class="sep ng-star-inserted">, </ins><!---->
+                                                                                                        <span class="day">
+                                                                                                            29 Nov (Mon)
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                    <!---->
+                                                                                                </p>
+                                                                                                <div class="segment-info-wrapper">
+                                                                                                    <div class="segment-info collapsed clickable">
+                                                                                                        <div class="info-header">
+                                                                                                            <span class="row-img">
+                                                                                                                <div class="airline-logo">
+                                                                                                                    <img src="assets/images/PK (2).png" width="30" height="30" alt="">
+                                                                                                                </div>
+                                                                                                                <span class="airline-info">
+                                                                                                                    <span class="airline-name">Pakistan Airlines</span>
+                                                                                                                    <span class="qa-segment-airline-name-operated-by ng-star-inserted">operated by Pakistan Airlines</span><!---->
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                            <span class="row-img right">
+                                                                                                                <!---->
+                                                                                                                <span class="aircraft jet ng-star-inserted">
+                                                                                                                    <img src="assets/images/aircraft.png" alt="">
+                                                                                                                    <span class="name">AirbusA320 (Jet)</span>
+                                                                                                                </span><!---->
+                                                                                                                <span class="time-duration ng-star-inserted">
+                                                                                                                    <img src="assets/images/clock-time.png" alt="">
+                                                                                                                    <span class="time">1h 45min</span>
+                                                                                                                </span><!---->
+                                                                                                            </span>
+                                                                                                        </div>
+
+                                                                                                        <div class="facilities-wrapper">
+                                                                                                            <div class="ng-star-inserted">
+                                                                                                                <div class="facilities-list">
+                                                                                                                    <div class="facility ng-star-inserted">
+                                                                                                                        <img src="assets/images/briefcase.png" class="icon" alt="">
+                                                                                                                        <span>
+                                                                                                                            Checked baggage
+                                                                                                                            <!---->
+                                                                                                                            <span class="ng-star-inserted"> included!</span><!---->
+                                                                                                                            <!---->
+                                                                                                                        </span>
+                                                                                                                    </div>
+                                                                                                                    <div class="facility on-demand ng-star-inserted">
+                                                                                                                        <img src="assets/images/boxes.png" class="icon" alt="">
+                                                                                                                        <span>
+                                                                                                                            Seat configuration
+                                                                                                                            <!---->
+                                                                                                                            <!---->
+                                                                                                                            <span class="ng-star-inserted">: 3-3</span><!---->
+                                                                                                                        </span>
+                                                                                                                    </div><!---->
+                                                                                                                </div>
+                                                                                                            </div><!---->
+                                                                                                            <div class="flight-info">
+                                                                                                                <span class="number">Flight number: <strong class="flight-number">302</strong></span>
+                                                                                                                <span>Class: <strong class="service-class"> Economy</strong></span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <!---->
+                                                                                            </div>
+                                                                                            <p class="airport text-left">
+                                                                                                <span class="airport-name">
+                                                                                                    <span class="airport-title">Allama Iqbal (LHE)</span><ins class="sep">, </ins> <span class="city-name">Lahore</span><ins class="sep">, </ins>
+                                                                                                    <span class="country-name">Pakistan</span>
+                                                                                                </span>
+                                                                                                <span class="time">
+                                                                                                    <span class="segment-direction">arrival:</span>
+                                                                                                    <span class="hour ng-star-inserted">09:45</span><!----><ins class="sep ng-star-inserted">, </ins><!---->
+                                                                                                    <span class="day">
+                                                                                                        29 Nov (Mon)
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                                <!---->
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+
+                                                                    </div>
+                                                                    <div class="modal-footer mt-3">
+                                                                        <button type="button" class="btn btn-dark" data-dismiss="modal" style="padding: 5px 22px;">Close</button>
+                                                                        <a href="flight_booking.html" class="btn btn-primary" style="padding: 5px 22px;">Book Now</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-12 detail-btn-sec">
+                                    <div class="row mb-1">
+                                        <div class="col-md-12">
+                                            <div class="top-sec">
+                                                <span>23,240</span>
+                                                PKR
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a href="flight_booking.html" class="btn btn-primary" style="padding: 6px 26px;">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- /content area -->
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
