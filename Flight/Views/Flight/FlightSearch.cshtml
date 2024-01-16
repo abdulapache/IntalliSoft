@@ -1,0 +1,250 @@
+﻿@{
+    ViewData["Title"] = "Flight Search";
+    Layout = "~/Views/Flight/_flightLayout.cshtml";
+
+}
+
+
+
+
+
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content header-elements-md-inline">
+                <div class="page-title d-flex">
+                    <h4><span class="font-weight-semibold">Search Flight</span> </h4>
+                    <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+                </div>
+
+                <div class="header-elements d-none py-0 mb-3 mb-md-0">
+                    <div class="breadcrumb">
+                        <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Dashboard</a>
+                        <span class="breadcrumb-item">Flights</span>
+                        <span class="breadcrumb-item active">Search Flight</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page header -->
+        <!-- Page content -->
+        <div class="page-content pt-0">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+                <!-- Content area -->
+                <div class="content">
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning text-white header-elements-inline">
+                            <h5 class="card-title">Search Flight</h5>
+                        </div>
+                        <div class="">
+                            <div class="">
+                                <div class="card-body">
+                                <form method="GET" id="flightForm" action="~/Flight/FlightSearch">
+                                    <ul class="nav mb-4" id="myTab">
+                                        <li class="active pr-3">
+                                            <a href="#oneway">
+                                                <div class="checkbox oneway-checked">
+                                                    <label class="oneway-label">
+                                                        <input class="oneway-box-check" type="radio" name="Path" id="product" value="OneWay" checked />
+                                                        <div class="oneway-box">OneWay</div>
+                                                    </label>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="pr-3">
+                                            <a href="#round">
+                                                <div class="checkbox oneway-checked">
+                                                    <label class="oneway-label">
+                                                        <input class="oneway-box-check" type="radio" name="Path" id="product" value="Round" />
+                                                        <div class="oneway-box">Round</div>
+                                                    </label>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="pr-3">
+                                            <a href="#multi">
+                                                <div class="checkbox oneway-checked">
+                                                    <label class="oneway-label">
+                                                        <input class="oneway-box-check" type="radio" name="Path" id="product" value="Multi" />
+                                                        <div class="oneway-box">Multi</div>
+                                                    </label>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="oneway">
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">From:</label>
+                                                        <div class="col-lg-9">
+                                                            <input type="text" class="form-control form-control-sm" name="From">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Going To:</label>
+                                                        <div class="col-lg-9">
+                                                            <input type="text" class="form-control form-control-sm" name="To">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left">Departure:</label>
+                                                        <div class="col-lg-9">
+                                                            <input type="date" class="form-control form-control-sm" name="Departure">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                        <div class="col-lg-3">
+                                                            <select name="Adults" class="form-control form-control-sm" id="city">
+                                                                <option selected="">Adults</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-lg-3">
+                                                            <select name="Infant" class="form-control form-control-sm" id="city">
+                                                                <option selected="">Infant</option>
+                                                                <option value="1">1</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <select name="Children" class="form-control form-control-sm" id="city">
+                                                                <option selected="">Children</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                        <div class="col-lg-9">
+                                                            <div class="form-check form-check-inline mt-1 form-control form-control-sm">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input-styled" data-fouc="" name="Days">
+                                                                    +/- 3days
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                        <div class="col-lg-5">
+                                                            <select name="Cabin" class="form-control form-control-sm" id="city">
+                                                                <option selected="">Cabin</option>
+                                                                <option value="Business">Business</option>
+                                                                <option value="4">Economy</option>
+                                                                <option value="Economy">First</option>
+                                                                <option value="PremiumBusiness">PremiumBusiness</option>
+                                                                <option value="PremiumEconomy">PremiumEconomy</option>
+                                                                <option value="PremiumFirst">PremiumFirst</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Preferred AirLine:" name="Preferred">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-form-label-sm col-lg-3 text-lg-left"></label>
+                                                        <div class="col-lg-9">
+                                                            <div class="form-check form-check-inline mt-1 form-control form-control-sm">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input-styled" name="Direct">
+                                                                    Direct
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 text-center mt-4">
+                                                    <button class="btn btn-primary" type="submit">Search</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+                                </form>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                <div class="card border-warning">
+                    <div class="card-header bg-warning text-white header-elements-inline">
+                        <h5 class="card-title">Flight Details</h5>
+                    </div>
+                    <div class="card-body over-flow-mob">
+                        <table class="table datatable-reorder">
+                            <thead>
+                                <tr>
+                                    <th>Trip type</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Departing</th>
+                                    <th>AirLine</th>
+                                    <th>Class</th>
+                                    <th>Adult</th>
+                                    <th>Child</th>
+                                    <th>Infant</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Data.Flights)
+                                {
+                                    <tr>
+                                        <td>@item.TicketType</td>
+                                        <td>@item.Origin</td>
+                                        <td>@item.Destination</td>
+                                        <td>@item.DepartureDate</td>
+                                        <td>@item.AirlineCode</td>
+                                        <td>@item.Cabin</td>
+                                        <td>@item.AdultQuantity</td>
+                                        <td>@item.ChildQuantity</td>
+                                        <td>@item.InfantQuantity</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+             
+           
+                <!-- /content area -->
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
