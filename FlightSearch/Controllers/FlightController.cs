@@ -19,13 +19,10 @@ namespace FlightSearch.Controllers
 
         public async Task<IActionResult> FlightSearch(FlightRequest model)
         {
-            if(model.To == null || model.From == null)
-            {
-                return View();
-            }
-            else
-            {
-                try
+           
+			ResponseBase<SearchResponse> response = new ResponseBase<SearchResponse>();
+
+			try
                 {
                     using (var httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(60) })
                     {
@@ -40,17 +37,15 @@ namespace FlightSearch.Controllers
                         //             $"&Infant={model.Infant}&ReturnType=json&UserName=intelli&ApiPassword=786786&ClientID=1" +
                         //             $"&DirectOnly={model.Direct}&ShowAlternateGrid=False";
 
-                        using (var response = await httpClient.GetAsync(apiUrl))
+                        using (var ApiResponse = await httpClient.GetAsync(apiUrl))
                         {
-                            if (response.IsSuccessStatusCode)
+                            if (ApiResponse.IsSuccessStatusCode)
                             {
-                                string apiResponse = await response.Content.ReadAsStringAsync();
-                                // Process the API response as needed
-                            }
+                                string data = await ApiResponse.Content.ReadAsStringAsync();
+							    response.Data = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchResponse>(data);
+						}
                             else
                             {
-                                // Handle the error response
-                                // For example, log the response status code and content
                                 string errorResponse = await response.Content.ReadAsStringAsync();
                                 Console.WriteLine($"Error: {response.StatusCode}, {errorResponse}");
                             }
@@ -63,7 +58,7 @@ namespace FlightSearch.Controllers
                     Console.WriteLine($"An error occurred: {ex.Message}");
                 }
                 return View();
-            }
+           
             
         }
     }
